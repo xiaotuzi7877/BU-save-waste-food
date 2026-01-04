@@ -1,3 +1,21 @@
+
+
+## Why I Built This
+
+After campus events, a lot of perfectly good food is left unclaimed—not because students don’t want it, but because the information is scattered and arrives too late. I built this project to centralize those last-minute opportunities and help redistribute food before it gets thrown away.
+
+I treated it like a real product build rather than a demo: prioritizing clear permission boundaries, predictable data behavior, and “end-to-end” flows (create → discover → claim → notify) so the system reduces manual coordination instead of adding more.
+
+### Implementation Highlights
+- **Image pipeline:** stores event photos in **Supabase Storage**, handling upload + public URL generation server-side to avoid exposing sensitive credentials in the browser  
+- **Input validation:** uses **Zod** to validate form and request payloads, reducing bad data and edge-case failures  
+- **Admin insights:** uses **Recharts** to visualize key usage trends for faster operational understanding  
+- **Email delivery:** integrates **Resend** for transactional emails (e.g., publish/claim confirmations) so notifications are a built-in capability, not manual forwarding
+
+
+
+
+
 # Spark! Bytes
 
 A full-stack web application for sharing and discovering free food opportunities at Boston University. Built with Next.js (React) frontend and Express.js (TypeScript) backend.
